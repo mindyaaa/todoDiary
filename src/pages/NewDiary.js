@@ -23,6 +23,8 @@ export default function NewDiary() {
                     <span>컨텐츠</span>
                     <textarea />
                 </section>
+
+                <button>작성하기</button>
             
             </div>
     </div>

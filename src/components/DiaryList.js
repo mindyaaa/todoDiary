@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router';
+import MyButton from './MyButton';
 
 export default function DiaryList({author,id}) {
 
@@ -12,7 +13,7 @@ export default function DiaryList({author,id}) {
     return (
         <div className='DiaryList'>
             <span>{author}</span>
-            <button onClick={handleEdit}>수정하기</button>           
+            <MyButton text={'수정하기'} onClick={handleEdit} />
         </div>
     );
 }

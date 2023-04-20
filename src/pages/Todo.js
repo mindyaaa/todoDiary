@@ -1,10 +1,13 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Header from '../components/Header';
 import TodoList from '../components/TodoList';
 
 export default function Todo() {
+
+
     const [todo, setTodo] = useState('');
     const [todoList, setTodoList] = useState([]);
+    
 
     const todoId = useRef(0);
 
@@ -18,22 +21,22 @@ export default function Todo() {
             alert('할 일이 입력되지 않았습니다!')
         }
 
-        else {
-            todoId.current += 1;
-            setTodoList([newTodo, ...todoList]);
-        }
+        todoId.current += 1;
+        setTodoList([newTodo, ...todoList]);
+        // localStorage.setItem("todo", JSON.stringify(todoList));
 
     };
 
     const onRemove = (id) => {
         const filterTodo = todoList.filter((item) => item.id !== id);
+        // localStorage.setItem("todo", JSON.stringify(filterTodo));
         return setTodoList(filterTodo);
     };
 
     const onEdit = (todo, targetId) => {
         const editedTodo = todoList.map((item) => item.id === targetId ? {id: item.id, todo} : {...item});
         return setTodoList(editedTodo);
-    }
+    };
 
     return (
         <div className='Todo basicStyle'>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-export default function TodoList({id, todo, onRemove, onEdit, setTodo}) {
+export default function TodoList({id, todo, onRemove, onEdit}) {
 
     const [isEdit, setIsEdit] = useState(false);
     const [editTodo, setEditTodo] = useState(todo);

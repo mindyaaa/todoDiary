@@ -13,12 +13,41 @@ body {
   width: 100vw;
 }
 
+button {
+  font-family: 'Yeon Sung';
+  font-size: medium;
+  border-radius: 5px;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+
+
 .basicStyle {
   width: 100%;
   height: 90vh;
   background-color: aliceblue;
   display: flex;
   flex-direction: column;
+}
+
+/* Button */
+
+.Button .blue {
+  background-color: skyblue;
+}
+
+.Button .tomato {
+  background-color: tomato;
+}
+
+.Button .default {
+  background-color: #ececec;
+}
+
+.Button button {
+  border: none;
 }
 
 @media (min-height: 650px) {
@@ -35,7 +64,7 @@ body {
 
 .Header {
   height: 10vh;
-  background-color: wheat;
+  background-color: skyblue;
   text-align: center;
 }
 
@@ -71,4 +100,15 @@ body {
   
   font-size: larger;
   font-family: 'Yeon Sung';
+}
+
+/* DIARY */
+
+.diaryContents {
+  background-color: cornsilk;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

@@ -5,7 +5,7 @@ import Home from './pages/Home';
 import Todo from './pages/Todo';
 import Diary from './pages/Diary';
 import Edit from './pages/Edit';
-import New from './pages/New.';
+import NewDiary from './pages/NewDiary';
 
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
           <Route path='/todo' element={<Todo />}/>
           <Route path='/diary' element={<Diary />}/>
           <Route path='/edit/:id' element={<Edit />}/>
-          <Route path='/new' element={<New />}/>
+          <Route path='/newDiary' element={<NewDiary />}/>
         </Routes>
       </div>
     </BrowserRouter>
